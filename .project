@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>Popgenie-Bulktools</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>com.adobe.flexbuilder.project.flexbuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>com.adobe.flexbuilder.project.flexnature</nature>
+		<nature>com.adobe.flexbuilder.project.actionscriptnature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>${OUTPUT_FOLDER}</name>
+			<type>2</type>
+			<location>C:/wamp/www/bulktools</location>
+		</link>
+		<link>
+			<name>bin-debug</name>
+			<type>2</type>
+			<location>C:/wamp/www/bulktools2</location>
+		</link>
+		<link>
+			<name>bin-release</name>
+			<type>2</type>
+			<location>C:/wamp/www/bulktoolsextend</location>
+		</link>
+		<link>
+			<name>bin-release1</name>
+			<type>2</type>
+			<location>C:/wamp/www/bulktoolsnewone</location>
+		</link>
+		<link>
+			<name>bin-release8</name>
+			<type>2</type>
+			<location>C:/wamp/www/vicki</location>
+		</link>
+	</linkedResources>
+</projectDescription>
