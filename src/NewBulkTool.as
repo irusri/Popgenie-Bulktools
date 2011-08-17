@@ -855,7 +855,9 @@ private function idconversionsubmitClick():void{
 	
 	
 }
-
+/**
+ * Sort arraycollection
+ */
 public function sortCollection(arrayCollection : ArrayCollection) : void
 {
 	//Create the sort field
