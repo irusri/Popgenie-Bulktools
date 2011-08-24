@@ -1,6 +1,6 @@
 package 
 {
-
+	
 	import events.ShowInBulkToolEvent;
 	
 	import flash.events.ContextMenuEvent;
@@ -16,7 +16,7 @@ package
 	import mx.core.EventPriority;
 	import mx.events.CloseEvent;
 	import mx.events.ListEvent;
-
+	
 	public class IBDataGrid extends AdvancedDataGrid
 	{
 		[Bindable] public var enableCopy : Boolean = true;
@@ -34,56 +34,52 @@ package
 		{
 			super();		
 		}
-			
+		
 		// I am creating a copy context item and its handler in creation complete of DATAGRID if and only if enableCopy is true.
-	    override protected function createChildren():void{
+		override protected function createChildren():void{
 			super.createChildren();
-			 var flag:Boolean = false
-				if(enableCopy){
-								contextMenu = new ContextMenu();
-								createContextMenu();
-							    addEventListener(ListEvent.ITEM_CLICK,
-				                         										itemClickHandler,
-				                         										false, EventPriority.DEFAULT_HANDLER);
-				                 flag = true;
-   					}			
+			var flag:Boolean = false
+			if(enableCopy){
+				contextMenu = new ContextMenu();
+				createContextMenu();
+				addEventListener(ListEvent.ITEM_CLICK,
+					itemClickHandler,
+					false, EventPriority.DEFAULT_HANDLER);
+				flag = true;
+			}			
 		}
-	    
+		
 		private function createContextMenu():void{
-<<<<<<< HEAD
 			copyContextItems = new ContextMenuItem("select genes");
-=======
-			copyContextItems = new ContextMenuItem("send to bulk tools");
->>>>>>> 428e91131af9e91307cfc439c220309cd162c07a
-		      copyContextItem = new ContextMenuItem("copy row/s");
-	          copyContextItem.enabled = false;
-			  copyContextItems.enabled = false;
-			  copyContextItems.addEventListener(ContextMenuEvent.MENU_ITEM_SELECT,copyDataHandlers);	
-			  copyContextItem.addEventListener(ContextMenuEvent.MENU_ITEM_SELECT,copyDataHandler);		
-			  contextMenu.customItems.push(copyContextItem);
-			  contextMenu.customItems.push(copyContextItems);
-			  // comment the following line if you want default items in context menu.
-			  contextMenu.hideBuiltInItems();
+			copyContextItem = new ContextMenuItem("copy row/s");
+			copyContextItem.enabled = false;
+			copyContextItems.enabled = false;
+			copyContextItems.addEventListener(ContextMenuEvent.MENU_ITEM_SELECT,copyDataHandlers);	
+			copyContextItem.addEventListener(ContextMenuEvent.MENU_ITEM_SELECT,copyDataHandler);		
+			contextMenu.customItems.push(copyContextItem);
+			contextMenu.customItems.push(copyContextItems);
+			// comment the following line if you want default items in context menu.
+			contextMenu.hideBuiltInItems();
 		}
 		
 		private function copyDataHandler(event:Event):void{
 			dataToCopy = '';
 			if(selectedItems != null){
-				 dataToCopy = getSelectedRowsData();
-			//	 dataToCopy = ((headerString == '') ? getHeaderData() : headerString)+"\n" + dataToCopy;
-				 dataToCopy
-				 copyContextItem.enabled = true;
-				 System.setClipboard(dataToCopy);
+				dataToCopy = getSelectedRowsData();
+				//	 dataToCopy = ((headerString == '') ? getHeaderData() : headerString)+"\n" + dataToCopy;
+				dataToCopy
+				copyContextItem.enabled = true;
+				System.setClipboard(dataToCopy);
 			}  			
 		}
 		private function copyDataHandlers(event:Event):void{
 			dataToCopy = '';
 			if(selectedItems != null){
 				dataToCopy = getSelectedRowsDatasend();
-			//	dataToCopy = ((headerString == '') ? getHeaderData() : headerString)+"\n" + dataToCopy;				
+				//	dataToCopy = ((headerString == '') ? getHeaderData() : headerString)+"\n" + dataToCopy;				
 				copyContextItems.enabled = true;
 				dispatchEvent(new ShowInBulkToolEvent(ShowInBulkToolEvent.showinbulktool,true,false,dataToCopy))
-
+				
 				//System.setClipboard(dataToCopy);
 			}  			
 		}
@@ -92,17 +88,17 @@ package
 			trace("handling .. the event");
 			if(event.detail == 1)
 			{		
-			  	 
+				
 			}
-			 
+			
 		}
 		private function getHeaderData():String{		 
-			   headerString = '';		
-					for(var j:int = 0; j< columnCount; j++){
-						if((columns[j] as AdvancedDataGridColumn).visible)
-							headerString += (columns[j] as AdvancedDataGridColumn).headerText +"\n";
-					}
-		 		return headerString;	 	
+			headerString = '';		
+			for(var j:int = 0; j< columnCount; j++){
+				if((columns[j] as AdvancedDataGridColumn).visible)
+					headerString += (columns[j] as AdvancedDataGridColumn).headerText +"\n";
+			}
+			return headerString;	 	
 		}	
 		
 		private function getSelectedRowsData():String{
@@ -114,44 +110,27 @@ package
 				}
 				rowsData+= "\n";							 
 			}
-<<<<<<< HEAD
 			return rowsData; 
-=======
-			return rowsData;
->>>>>>> 428e91131af9e91307cfc439c220309cd162c07a
 		}
 		
 		private function getSelectedRowsDatasend():String{
 			var rowsData : String = '';
-<<<<<<< HEAD
 			for(var i:int =0;i<selectedItems.length;i++) {
 				for(var j:int = 0; j< 1; j++){
 					//if((columns[j] as AdvancedDataGridColumn).visible) Chanaka commented 23rd of august 2011
-						rowsData += selectedItems[i][(columns[0] as AdvancedDataGridColumn).dataField].toString();//+",";
-=======
-			//trace(this.collection.length);
-			for(var i:int =0;i<selectedItems.length;i++) {
-				for(var j:int = 0; j< 1; j++){
-					if((columns[j] as AdvancedDataGridColumn).visible)
-						rowsData += selectedItems[i][(columns[0] as AdvancedDataGridColumn).dataField].toString()+".1";
->>>>>>> 428e91131af9e91307cfc439c220309cd162c07a
-					   if(i<selectedItems.length-1){
-						   rowsData+= "\n" ;
-					   }
+					rowsData += selectedItems[i][(columns[0] as AdvancedDataGridColumn).dataField].toString();//+",";
+					if(i<selectedItems.length-1){
+						rowsData+= "\n" ;
+					}
 				}
-			//	rowsData+= "\n";							 
+				//	rowsData+= "\n";							 
 			}
-<<<<<<< HEAD
 			rowsData = rowsData.replace( /\.1/gi, ",");
 			rowsData = rowsData.replace( /\.2/gi, ",");
 			rowsData = rowsData.replace( /\.3/gi, ",");
 			return rowsData;
 		}
 		
-=======
-			return rowsData;
-		}
->>>>>>> 428e91131af9e91307cfc439c220309cd162c07a
 		private function getSelectedRowsDatasend1():String{
 			var rowsData : String = '';
 			//trace(this.collection.length);
@@ -167,19 +146,19 @@ package
 			}
 			return rowsData;
 		}
-	    
+		
 		
 		public function copyDataHandlersbutton():void{
 			if(this.collection.length!=0){
-			dataToCopy = '';
-			if(selectedItems != null){
-				dataToCopy = getSelectedRowsDatasendbutton();
-				//	dataToCopy = ((headerString == '') ? getHeaderData() : headerString)+"\n" + dataToCopy;				
-				//copyContextItems.enabled = true;
-				dispatchEvent(new ShowInBulkToolEvent(ShowInBulkToolEvent.showinbulktool,true,false,dataToCopy))
-				
-				//System.setClipboard(dataToCopy);
-			}  }			
+				dataToCopy = '';
+				if(selectedItems != null){
+					dataToCopy = getSelectedRowsDatasendbutton();
+					//	dataToCopy = ((headerString == '') ? getHeaderData() : headerString)+"\n" + dataToCopy;				
+					//copyContextItems.enabled = true;
+					dispatchEvent(new ShowInBulkToolEvent(ShowInBulkToolEvent.showinbulktool,true,false,dataToCopy))
+					
+					//System.setClipboard(dataToCopy);
+				}  }			
 		}
 		
 		public function copyDataHandlersbutton1():void{
@@ -199,16 +178,16 @@ package
 			var rowsData : String = '';
 			//trace(this.collection.length);
 			if(this.collection.length!=0){
-			for(var i:int =0;i<this.collection.length;i++) {
-				for(var j:int = 0; j< 1; j++){
-					if((columns[j] as AdvancedDataGridColumn).visible)
-						rowsData += this.collection[i][(columns[0] as AdvancedDataGridColumn).dataField].toString()+".1";
-					if(i<this.collection.length-1){
-						rowsData+= "\n" ;
+				for(var i:int =0;i<this.collection.length;i++) {
+					for(var j:int = 0; j< 1; j++){
+						if((columns[j] as AdvancedDataGridColumn).visible)
+							rowsData += this.collection[i][(columns[0] as AdvancedDataGridColumn).dataField].toString()+".1";
+						if(i<this.collection.length-1){
+							rowsData+= "\n" ;
+						}
 					}
-				}
-				//	rowsData+= "\n";							 
-			}}
+					//	rowsData+= "\n";							 
+				}}
 			rowsData = rowsData.replace( /\s+.1/gi, ".1");
 			rowsData = rowsData.replace( /No_Value.1/gi, "");
 			rowsData = rowsData.replace( /No_Value.1\n/gi, "");
@@ -237,10 +216,10 @@ package
 			return rowsData;
 		}
 		
-	    private function itemClickHandler(event:ListEvent):void
-	    {
-	    	copyContextItem.enabled = true;
+		private function itemClickHandler(event:ListEvent):void
+		{
+			copyContextItem.enabled = true;
 			copyContextItems.enabled = true;
-	    }		
+		}		
 	}
 }
