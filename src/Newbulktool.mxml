@@ -3,11 +3,7 @@
 			   xmlns:s="library://ns.adobe.com/flex/spark"  
 			   xmlns:mx="library://ns.adobe.com/flex/mx"  creationComplete="bulktool_init();" minWidth="955" minHeight="600" xmlns:local="*">
 	<fx:Script>
-<<<<<<< HEAD
 		<![CDATA[ 
-=======
-		<![CDATA[
->>>>>>> 428e91131af9e91307cfc439c220309cd162c07a
 			import itemrenderer.atgbethit;
 			import itemrenderer.coortholgsrenderer;
 			import itemrenderer.orthologsrenderer;
@@ -18,15 +14,12 @@
 		]]> 
 	</fx:Script>
 	<fx:Declarations><!---->
-<<<<<<< HEAD
 		<mx:HTTPService id="httpService"
 						useProxy="false"  
 						resultFormat="text"
 						url="http://v22.popgenie.org/popgenie1/mastermenu/index2.php"  
 						fault="transcriptDataResultFault(event)"  
 						result="httpResults(event)" />
-=======
->>>>>>> 428e91131af9e91307cfc439c220309cd162c07a
 		<mx:HTTPService id="serve_getConfigData" 
 						resultFormat="text"
 						url="bulktools.json"
@@ -45,10 +38,7 @@
 						result="idconversionDataResult(event)"
 						fault="transcriptDataResultFault(event)"
 						resultFormat="text" />
-<<<<<<< HEAD
 		<s:RadioButtonGroup  enabled="{startArray.length!=0?true:false}"  id="bulktoolsradio"/>
-=======
->>>>>>> 428e91131af9e91307cfc439c220309cd162c07a
 		<s:RadioButtonGroup   id="controlboxRadio"/>
 		<s:RadioButtonGroup   id="subcontrolboxRadio"/>
 		<mx:WipeUp id="wipeup" duration="500"/>
@@ -59,14 +49,9 @@
 	<fx:Script source="NewBulkTool.as"></fx:Script>
 	<fx:Style source="style.css"/>
 	<!--Functional Annotation Grid-->
-<<<<<<< HEAD
 <local:IBDataGrid  allowMultipleSelection="true" variableRowHeight="true"  showEffect="{showme}" hideEffect="{hideme}" id="functionalannotationdg" visible="{geneinfoChk.selected}"  width="100%" height="100%">
 		<local:groupedColumns>
 			<mx:AdvancedDataGridColumn dataField="id" headerText="IDs"/>
-=======
-	<mx:AdvancedDataGrid   variableRowHeight="true"  showEffect="{showme}" hideEffect="{hideme}" id="functionalannotationdg" visible="{geneinfoChk.selected}"  width="100%" height="100%">
-		<mx:groupedColumns>
->>>>>>> 428e91131af9e91307cfc439c220309cd162c07a
 			<mx:AdvancedDataGridColumn dataField="id" headerText="ID">
 				<mx:itemRenderer>
 					<fx:Component>
@@ -133,19 +118,11 @@
 			</mx:AdvancedDataGridColumn>
 			<mx:AdvancedDataGridColumn editorDataField="result" itemEditor="itemrenderer.pyGOrender" itemRenderer="itemrenderer.pyGOrender" dataField="pyGO" headerText="Phytozome GO"/>
 			<mx:AdvancedDataGridColumn  dataField="PeptideName" headerText="PeptideName"/>
-<<<<<<< HEAD
 		</local:groupedColumns>
 	</local:IBDataGrid >
 	<!--Potein Grid-->
 	<mx:VBox width="100%"  height="100%">
 		<mx:AdvancedDataGrid  allowMultipleSelection="true"  variableRowHeight="true" showEffect="{showme}" hideEffect="{hideme}" width="100%"  id="sequencedg" visible="{sequenceChk.selected}"   height="100%">
-=======
-		</mx:groupedColumns>
-	</mx:AdvancedDataGrid>
-	<!--Potein Grid-->
-	<mx:VBox width="100%"  height="100%">
-		<mx:AdvancedDataGrid  variableRowHeight="true" showEffect="{showme}" hideEffect="{hideme}" width="100%"  id="sequencedg" visible="{sequenceChk.selected}"   height="100%">
->>>>>>> 428e91131af9e91307cfc439c220309cd162c07a
 			<mx:groupedColumns>
 				<mx:AdvancedDataGridColumn   visible="false"   dataField="id"  headerText="Id" />
 				<mx:AdvancedDataGridColumn visible="false" dataField="transcriptSeq" headerText="Transcrip Sequence"/>	
@@ -286,17 +263,10 @@
 			<!--<mx:AdvancedDataGridColumn itemRenderer="itemrenderer.pubesthit" dataField="pu" headerText="Best Blast Hits"/>-->
 			
 			<mx:AdvancedDataGridColumn  dataField="id"  headerText="v2.2" />
-<<<<<<< HEAD
 			<!--	<mx:AdvancedDataGridColumn itemRenderer="GenebankItemrenderer"   dataField="genebank"  headerText="Genebank" /> x="{this.parent.width/2-350}"-->
 		</mx:groupedColumns>
 	</mx:AdvancedDataGrid>	
 	<mx:Canvas   showEffect="wipedown" hideEffect="wipeup" id="controlBox" visible="{controlboxBoolean}" cornerRadius="5" horizontalScrollPolicy="off" verticalScrollPolicy="off"  right="0"  width="700" height="230" backgroundColor="#93d39a" >
-=======
-			<!--	<mx:AdvancedDataGridColumn itemRenderer="GenebankItemrenderer"   dataField="genebank"  headerText="Genebank" />-->
-		</mx:groupedColumns>
-	</mx:AdvancedDataGrid>	
-	<mx:Canvas   showEffect="wipedown" hideEffect="wipeup" id="controlBox" visible="{controlboxBoolean}" cornerRadius="5" horizontalScrollPolicy="off" verticalScrollPolicy="off" x="{this.parent.width/2-350}"  width="700" height="230" backgroundColor="#FFFF99" >
->>>>>>> 428e91131af9e91307cfc439c220309cd162c07a
 	<!--<mx:Image   source="@Embed(source='preload/pop1.png')"  right="2" top="2"/>-->
 		<s:TextArea fontWeight="bold" alpha="0.8" borderVisible="false" visible="{!conversionChk.selected}" focusColor="#000000" focusedTextSelectionColor="#FF9900"  color="#000000"  text="POPTR_0005s08110.1
 					POPTR_0020s00420.1
@@ -310,11 +280,7 @@
 		<mx:TextArea fontWeight="bold"  focusColor="#000000" alpha="0.8" borderVisible="false" visible="{conversionChk.selected}" color="#000000" id="overlapttxt" width="481" height="199" bottom="10" x="10"/>	
 		<s:Label fontWeight="bold" id="casee" visible="{conversionChk.selected}"  y="5" text="Conversion Ids:" top="7" x="15"/>
 		<s:Label fontWeight="bold" visible="{!conversionChk.selected}"  y="5" text="v2.2 Transcrip Ids:" top="7" x="15"/>
-<<<<<<< HEAD
 		<s:Button visible="{!conversionChk.selected}" click="submitTranscript_clickHandler();" label="Display"  x="511" bottom="15"/>
-=======
-		<s:Button visible="{!conversionChk.selected}" click="submitTranscript_clickHandler();" label="Submit"  x="511" bottom="15"/>
->>>>>>> 428e91131af9e91307cfc439c220309cd162c07a
 		<mx:Image click="handleExportClick()"  id="csvbtn"  width="42" height="20" buttonMode="true" source="@Embed(source='assets/icon-csv.png')"  x="597" bottom="14"/>
 		
 		<s:RadioButton x="515"   id="geneinfoChk"  bottom="140" label="Gene Information" groupName="controlboxRadio"/>
@@ -337,17 +303,10 @@
 	</mx:HBox>
 
 	</mx:Canvas>
-<<<<<<< HEAD
 	<mx:HBox paddingTop="10" backgroundColor="#93d39a" showEffect="wipedown" cornerRadius="5" horizontalScrollPolicy="off" verticalScrollPolicy="off" right="50" x="{this.parent.width/2-300}" y="230" width="600" height="70" hideEffect="wipeup"  id="geneinfoBox" visible="{geneinfoChk.selected &amp;&amp; subcontrolboxBoolean}"  >
 		<local:CheckBoxes />
 	</mx:HBox>
 	<mx:HBox paddingTop="10" backgroundColor="#93d39a" showEffect="wipedown" cornerRadius="5" horizontalScrollPolicy="off" verticalScrollPolicy="off" right="50" x="{this.parent.width/2-300}" y="230" width="600" height="70" hideEffect="wipeup" id="sequenceBox" visible="{sequenceChk.selected  &amp;&amp; subcontrolboxBoolean}" >
-=======
-	<mx:HBox paddingTop="10" backgroundColor="#FFFF99" showEffect="wipedown" cornerRadius="5" horizontalScrollPolicy="off" verticalScrollPolicy="off" x="{this.parent.width/2-300}" y="230" width="600" height="70" hideEffect="wipeup"  id="geneinfoBox" visible="{geneinfoChk.selected &amp;&amp; subcontrolboxBoolean}"  >
-		<local:CheckBoxes />
-	</mx:HBox>
-	<mx:HBox paddingTop="10" backgroundColor="#FFFF99" showEffect="wipedown" cornerRadius="5" horizontalScrollPolicy="off" verticalScrollPolicy="off" x="{this.parent.width/2-300}" y="230" width="600" height="70" hideEffect="wipeup" id="sequenceBox" visible="{sequenceChk.selected  &amp;&amp; subcontrolboxBoolean}" >
->>>>>>> 428e91131af9e91307cfc439c220309cd162c07a
 		<mx:VBox paddingLeft="20">
 			<mx:RadioButton  click="subsequenceChange();" id="fastaproteinChk"  bottom="134" label="Sequence Peptide" groupName="subcontrolboxRadio"/>
 			<mx:RadioButton click="subsequenceChange()"  id="fastatranscriptChk" bottom="114" label="Sequence transcript" groupName="subcontrolboxRadio"/>
@@ -369,11 +328,7 @@
 			<s:Label fontWeight="bold" text="{downstreamSlider.value.toString()}" />
 		</mx:VBox>
 	</mx:HBox>
-<<<<<<< HEAD
 	<mx:HBox paddingTop="20" paddingLeft="5" backgroundColor="#93d39a" showEffect="wipedown" cornerRadius="5" horizontalScrollPolicy="off" right="25" verticalScrollPolicy="off" x="{this.parent.width/2-325}" y="230" width="650" height="70" hideEffect="wipeup" id="conversionBox" visible="{conversionChk.selected &amp;&amp; conversionCombo.selectedIndex==0 &amp;&amp; subcontrolboxBoolean}">
-=======
-	<mx:HBox paddingTop="20" paddingLeft="5" backgroundColor="#FFFF99" showEffect="wipedown" cornerRadius="5" horizontalScrollPolicy="off" verticalScrollPolicy="off" x="{this.parent.width/2-325}" y="230" width="650" height="70" hideEffect="wipeup" id="conversionBox" visible="{conversionChk.selected &amp;&amp; conversionCombo.selectedIndex==0 &amp;&amp; subcontrolboxBoolean}">
->>>>>>> 428e91131af9e91307cfc439c220309cd162c07a
 		<local:CheckBoxes />
 		<!--<s:DropDownList fontWeight="bold" id="conversionCombo" prompt="Populus Genome" selectedIndex="0"  width="150">
 			<mx:ArrayCollection>
@@ -386,7 +341,6 @@
 		<mx:Label fontWeight="bold" id="tlabel"  textAlign="left"	text="v2.2"/>
 		<s:Button  click="idconversionsubmitClick();"  fontWeight="bold" label="Convert"  />	-->
 	</mx:HBox>
-<<<<<<< HEAD
 	<mx:HBox paddingTop="20" paddingLeft="5" backgroundColor="#93d39a" showEffect="wipedown" cornerRadius="5" horizontalScrollPolicy="off" right="25" verticalScrollPolicy="off" x="{this.parent.width/2-325}" y="230" width="650" height="70" hideEffect="wipeup" id="conversionBox1" visible="{conversionChk.selected &amp;&amp; conversionCombo.selectedIndex==1 &amp;&amp; subcontrolboxBoolean}">
 		<local:CheckBoxes id="poppulusmainchk" />
 		</mx:HBox>
@@ -410,25 +364,5 @@
 	<mx:TextInput  borderColor="Black" borderAlpha="0.8"   borderStyle="solid" visible="{geneinfoChk.selected}" bottom="0" left="5" id="txt" text="Filter by Transcript ID.." focusOut="resetMyTextInput()" change="filter2();" focusIn="clearMyTextInput();" />
 		
 	
-=======
-	<mx:HBox paddingTop="20" paddingLeft="5" backgroundColor="#FFFF99" showEffect="wipedown" cornerRadius="5" horizontalScrollPolicy="off" verticalScrollPolicy="off" x="{this.parent.width/2-325}" y="230" width="650" height="70" hideEffect="wipeup" id="conversionBox1" visible="{conversionChk.selected &amp;&amp; conversionCombo.selectedIndex==1 &amp;&amp; subcontrolboxBoolean}">
-		<local:CheckBoxes id="poppulusmainchk" />
-		</mx:HBox>
-	<mx:HBox paddingTop="20" paddingLeft="5" backgroundColor="#FFFF99" showEffect="wipedown" cornerRadius="5" horizontalScrollPolicy="off" verticalScrollPolicy="off" x="{this.parent.width/2-325}" y="230" width="650" height="70" hideEffect="wipeup" id="conversionBox2" visible="{conversionChk.selected &amp;&amp; conversionCombo.selectedIndex==2 &amp;&amp; subcontrolboxBoolean}">
-		<local:CheckBoxes id="atgmainchk" />
-	</mx:HBox>
-	<mx:HBox paddingTop="20" paddingLeft="5" backgroundColor="#FFFF99" showEffect="wipedown" cornerRadius="5" horizontalScrollPolicy="off" verticalScrollPolicy="off" x="{this.parent.width/2-325}" y="230" width="650" height="70" hideEffect="wipeup" id="conversionBox3" visible="{conversionChk.selected &amp;&amp; conversionCombo.selectedIndex==3 &amp;&amp; subcontrolboxBoolean}">
-		<local:CheckBoxes id="pumainchk" />
-	</mx:HBox>
-	<mx:VBox paddingTop="0" paddingLeft="5" backgroundColor="#FFFF99" showEffect="wipedown" cornerRadius="5" horizontalScrollPolicy="off" verticalScrollPolicy="off" x="{this.parent.width/2-325}" y="230" width="650" height="70" hideEffect="wipeup" id="conversionBox4" visible="{conversionChk.selected &amp;&amp; conversionCombo.selectedIndex==4 &amp;&amp; subcontrolboxBoolean}">
-		<s:Label fontWeight="bold" color="red" text="Test Data"/>
-		<local:CheckBoxes id="puexpandmainchk" />
-	</mx:VBox>
-	<mx:VBox paddingTop="5" paddingLeft="5" backgroundColor="#FFFF99" showEffect="wipedown" cornerRadius="5" horizontalScrollPolicy="off" verticalScrollPolicy="off" x="{this.parent.width/2-325}" y="230" width="650" height="70" hideEffect="wipeup" id="conversionBox5" visible="{conversionChk.selected &amp;&amp; conversionCombo.selectedIndex==5 &amp;&amp; subcontrolboxBoolean}">
-		<s:Label fontWeight="bold" color="red" text="Test Data"/>
-		<local:CheckBoxes id="puexpandmainchks" />
-	</mx:VBox>	
-	<mx:Image showEffect="wipedown" hideEffect="wipeup" width="25" toolTip="Show Control" height="25" buttonMode="true" source="@Embed(source='assets/down.png')" visible="{!controlboxBoolean}" click="{controlboxBoolean=true;subcontrolboxBoolean=true;}" x="{this.parent.width/2+320}" y="-2"/>
->>>>>>> 428e91131af9e91307cfc439c220309cd162c07a
 	<mx:Box backgroundColor="red" y="30" width="200" right="{this.width/2-100}" visible="false" id="alertBox"/>
 </s:Application>
