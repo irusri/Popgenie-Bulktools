@@ -50,7 +50,11 @@ package
 		}
 	    
 		private function createContextMenu():void{
+<<<<<<< HEAD
 			copyContextItems = new ContextMenuItem("select genes");
+=======
+			copyContextItems = new ContextMenuItem("send to bulk tools");
+>>>>>>> 428e91131af9e91307cfc439c220309cd162c07a
 		      copyContextItem = new ContextMenuItem("copy row/s");
 	          copyContextItem.enabled = false;
 			  copyContextItems.enabled = false;
@@ -110,27 +114,44 @@ package
 				}
 				rowsData+= "\n";							 
 			}
+<<<<<<< HEAD
 			return rowsData; 
+=======
+			return rowsData;
+>>>>>>> 428e91131af9e91307cfc439c220309cd162c07a
 		}
 		
 		private function getSelectedRowsDatasend():String{
 			var rowsData : String = '';
+<<<<<<< HEAD
 			for(var i:int =0;i<selectedItems.length;i++) {
 				for(var j:int = 0; j< 1; j++){
 					//if((columns[j] as AdvancedDataGridColumn).visible) Chanaka commented 23rd of august 2011
 						rowsData += selectedItems[i][(columns[0] as AdvancedDataGridColumn).dataField].toString();//+",";
+=======
+			//trace(this.collection.length);
+			for(var i:int =0;i<selectedItems.length;i++) {
+				for(var j:int = 0; j< 1; j++){
+					if((columns[j] as AdvancedDataGridColumn).visible)
+						rowsData += selectedItems[i][(columns[0] as AdvancedDataGridColumn).dataField].toString()+".1";
+>>>>>>> 428e91131af9e91307cfc439c220309cd162c07a
 					   if(i<selectedItems.length-1){
 						   rowsData+= "\n" ;
 					   }
 				}
 			//	rowsData+= "\n";							 
 			}
+<<<<<<< HEAD
 			rowsData = rowsData.replace( /\.1/gi, ",");
 			rowsData = rowsData.replace( /\.2/gi, ",");
 			rowsData = rowsData.replace( /\.3/gi, ",");
 			return rowsData;
 		}
 		
+=======
+			return rowsData;
+		}
+>>>>>>> 428e91131af9e91307cfc439c220309cd162c07a
 		private function getSelectedRowsDatasend1():String{
 			var rowsData : String = '';
 			//trace(this.collection.length);

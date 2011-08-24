@@ -1,2 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<<<<<<< HEAD
 <flexProperties enableServiceManager="false" flexServerFeatures="0" flexServerType="16" fmlDataModelLocation=".model/bulktools.fml" serverContextRoot="" serverRoot="D:/wamp/www" serverRootURL="http://localhost/" toolCompile="true" useServerFlexSDK="false" version="2"/>
+=======
+<flexProperties enableServiceManager="false" flexServerFeatures="0" flexServerType="16" fmlDataModelLocation=".model/bulktools.fml" serverContextRoot="" serverRoot="C:/wamp/www" serverRootURL="http://localhost/" toolCompile="true" useServerFlexSDK="false" version="2"/>
+>>>>>>> 428e91131af9e91307cfc439c220309cd162c07a

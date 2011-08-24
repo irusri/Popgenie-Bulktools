@@ -19,21 +19,34 @@
 		<link>
 			<name>${OUTPUT_FOLDER}</name>
 			<type>2</type>
+<<<<<<< HEAD
 			<location>D:/wamp/www/bulktools</location>
+=======
+			<location>C:/wamp/www/bulktools</location>
+>>>>>>> 428e91131af9e91307cfc439c220309cd162c07a
 		</link>
 		<link>
 			<name>bin-debug</name>
 			<type>2</type>
+<<<<<<< HEAD
 			<location>D:/wamp/www/bulktools2</location>
+=======
+			<location>C:/wamp/www/bulktools2</location>
+>>>>>>> 428e91131af9e91307cfc439c220309cd162c07a
 		</link>
 		<link>
 			<name>bin-release</name>
 			<type>2</type>
+<<<<<<< HEAD
 			<location>D:/wamp/www/bulktoolsextend</location>
+=======
+			<location>C:/wamp/www/bulktoolsextend</location>
+>>>>>>> 428e91131af9e91307cfc439c220309cd162c07a
 		</link>
 		<link>
 			<name>bin-release1</name>
 			<type>2</type>
+<<<<<<< HEAD
 			<location>D:/wamp/www/bulktoolsnewone</location>
 		</link>
 		<link>
@@ -55,11 +68,18 @@
 			<name>bin-release5</name>
 			<type>2</type>
 			<location>D:/wamp/www/Pbts12</location>
+=======
+			<location>C:/wamp/www/bulktoolsnewone</location>
+>>>>>>> 428e91131af9e91307cfc439c220309cd162c07a
 		</link>
 		<link>
 			<name>bin-release8</name>
 			<type>2</type>
+<<<<<<< HEAD
 			<location>D:/wamp/www/vicki</location>
+=======
+			<location>C:/wamp/www/vicki</location>
+>>>>>>> 428e91131af9e91307cfc439c220309cd162c07a
 		</link>
 	</linkedResources>
 </projectDescription>
