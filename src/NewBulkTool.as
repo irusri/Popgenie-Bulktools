@@ -5,13 +5,10 @@ import com.adobe.serialization.json.JSON;
 import events.GoEvent;
 import events.ShowInBulkToolEvent;
 
-<<<<<<< HEAD
 import flash.net.URLLoader;
 import flash.net.URLLoaderDataFormat;
 import flash.net.navigateToURL;
 
-=======
->>>>>>> 428e91131af9e91307cfc439c220309cd162c07a
 import itemrenderer.GenebankItemrenderer;
 import itemrenderer.Gorenderer;
 import itemrenderer.cds;
@@ -40,11 +37,8 @@ import mx.rpc.events.FaultEvent;
 import mx.rpc.events.ResultEvent;
 import mx.utils.ObjectUtil;
 
-<<<<<<< HEAD
 import org.alivepdf.saving.Method;
 
-=======
->>>>>>> 428e91131af9e91307cfc439c220309cd162c07a
 import utils.DataGridUtils;
 
 private var modelConfig:Object;
@@ -86,10 +80,7 @@ private var searchText:String="";
 [Bindable]
 private var typeText:String="";
 
-<<<<<<< HEAD
 
-=======
->>>>>>> 428e91131af9e91307cfc439c220309cd162c07a
 /**
  * creationCompete HTTP service call
  */
@@ -107,7 +98,6 @@ private function bulktool_init() : void {
 private function showinbulktoolFunction(e:ShowInBulkToolEvent):void{
 	var zerostateavalue:String =new String();
 	zerostateavalue=e.showinbulktoolString;
-<<<<<<< HEAD
 	searchText=zerostateavalue;
 	typeText="functional";
 	//inputTranscripttxt.text=zerostateavalue;
@@ -129,13 +119,6 @@ public function httpResults(event:ResultEvent):void {
 	//Do something with the result.
 }
 
-=======
-	inputTranscripttxt.text=zerostateavalue;
-	geneinfoChk.selected=true;
-	submitTranscript_clickHandler();
-	
-}
->>>>>>> 428e91131af9e91307cfc439c220309cd162c07a
 /**
  * creationCompete HTTP service Result
  */
@@ -1243,7 +1226,6 @@ private function myLabelFuncs(item:Object,column:AdvancedDataGridColumn):String
 	return "No";
 	}*/
 }
-<<<<<<< HEAD
 
 /////////////////////////////////////////
 //filter main id
@@ -1274,5 +1256,3 @@ private function resetMyTextInput():void {
 }
 
 
-=======
->>>>>>> 428e91131af9e91307cfc439c220309cd162c07a
