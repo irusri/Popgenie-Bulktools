@@ -1,2 +1,1 @@
-Bioinformatics project based on actionscript and RIA. which helps to retrieve gene information from JSON webservice.User can be able to select the desired fields interactively and download results as a CSV or send to Galaxy.
-You can use this tool with your own data.Just you need to configure the JSON webservice.
+Bioinformatics project based on actionscript and Rich Internet application(RIA). Which helps to retrieve gene information from JSON webservice. User can be able to select desired fields interactively and download results as a CSV or send results to Galaxy. You can use this tool with your own data. You just need to configure the JSON webservice.
