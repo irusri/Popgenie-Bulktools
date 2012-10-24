@@ -1,5 +1,5 @@
 <?php
-/* Popgenie Smart ID recognize */
+/* Popgenie initial ID detector */
 /**
  * This script will search any version of ids in the popgenie database.
  *
