@@ -1,2 +1,2 @@
-Bioinformatic and actionscript project which helps to retrieve gene information.this tool is interactive user can be able to select the desired fields and download as CSV.
-This tool consist of several bioinformatics tools.We can use this tool with our own data.We just need to configure JSON webservice.
+Bioinformatic and actionscript project which helps to retrieve gene information from JSON webservice.User can be able to select the desired fields and download as a CSV.
+.You can use this tool with your own data.Just you need to configure the JSON webservice.
